@@ -16,7 +16,7 @@ $body = @{
 $jsonbody = $body|ConvertTo-Json
         #$params = @{"email"=$Email;"name"=$Name;"orgAccess"=$Orgaccess;}
 try{
-$response = Invoke-WebRequest -URI 'https://api.meraki.com/api/v1/organizations/723235/admins' -Method 'POST' -Headers $headers -Body $jsonbody -ContentType "application/json"
+$response = Invoke-WebRequest -URI 'https://api.meraki.com/api/v1/organizations/<orgid>/admins' -Method 'POST' -Headers $headers -Body $jsonbody -ContentType "application/json"
 }
 catch {
     $StatusCode = $_.Exception.Response.StatusCode
