@@ -53,7 +53,7 @@ var createteamsmsg = async function (merakicontent)
             "sections": [
                 {
                     "activityTitle": pretext,
-                    "activityImage": "https://www.mspnetworks.com/images/logo/meraki_cropped.png",
+                    "activityImage": "https://meraki.cisco.com/wp-content/uploads/2020/04/cisco-meraki-logo-1024x200.png",
                     "facts": [
                         {
                             "name": "Device",
@@ -138,8 +138,8 @@ router.post('/webhook', async function(req, res, next) {
     var ticketinfo = await submitticket.json();
     console.log(ticketinfo);
 
-    res.status(200).send('POST to MSPNetworks A OK').end();
-    //res.render('index', { title: 'MSPNetworks API Node' });
+    res.status(200).send('POST OK').end();
+    //res.render('index', { title: 'API Node' });
 });
 
 router.post('/webhooktest', async function(req, res, next) {
